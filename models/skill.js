@@ -1,10 +1,10 @@
 const skills = [
-    {id: 1, skill: 'HTML', done: true},
-    {id: 2, skill: 'CSS', done: true},
-    {id: 3, skill: 'JavaScript', done: true},
-    {id: 4, skill: 'MERN Stack', done: false},
-    {id: 5, skill: 'Python', done: false},
-    {id: 6, skill: 'RESTful routing', done: true}
+    {id: 01, skill: 'HTML', done: true},
+    {id: 02, skill: 'CSS', done: true},
+    {id: 03, skill: 'JavaScript', done: true},
+    {id: 04, skill: 'MERN Stack', done: false},
+    {id: 05, skill: 'Python', done: false},
+    {id: 06, skill: 'RESTful routing', done: true}
   ];
   
 module.exports = {
@@ -16,8 +16,8 @@ function getAll() {
     return skills;
 };
 
-function getOne() {
+function getOne(id) {
     // URL params are strings - convert to a number
     id = parseInt(id);
-    return todos.find(todo => todo.id === id);
+    return skills.find(skill => skill.id === id);
 };
