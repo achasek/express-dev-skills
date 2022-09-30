@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <!-- replacing the name of the title with this below makes it dynamically fetch the title, here, the todo -->
-    <title><%= title %></title>
-</head>
+<%- include('../partials/header') %>
 <body>
     <h1>Current Dev Skills as of <%= time %></h1>
     <ul>
@@ -17,11 +8,10 @@
             <a href="/skills/<%= s.id %>">
             <%= s.skill %>
           </a>
-            - 
-            <%= s.skill ? 'done' : 'not done' %>
+            <!-- -  -->
+            <!-- <%= s.done ? 'Learning it!' : 'Getting around to it...' %> -->
         </li>
       <% }); %>
     </ul>
     <a href="/skills/new">Add a New Skill</a>
-</body>
-</html>
+<%- include('../partials/footer') %>
